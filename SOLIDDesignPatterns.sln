@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SingleResponsibility", "SingleResponsibility", "{5EC39373-3FB8-46EA-AA99-AEF72F919794}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LiskovSubstitution", "LiskovSubstitution", "{86B3077A-0339-49D0-B871-6AD76353092E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleResponsibility.Lab", "SingleResponsibility.Lab\SingleResponsibility.Lab.csproj", "{B7EC7763-E5AB-4A7B-85F9-F5FF0505FC24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenAndClosed", "OpenAndClosed", "{29D87CB2-3B2D-4DDB-9714-8A1313D90EB2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InterfaceSegrigation", "InterfaceSegrigation", "{E5BAF715-1E2B-4B9B-8465-D1572ECA0643}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DependencyInversion", "DependencyInversion", "{25C43309-5576-4F23-8A42-E2B46EA65D5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAndClose.Lab", "OpenAndClose.Lab\OpenAndClose.Lab.csproj", "{609C49AF-96E9-4954-9F59-EE0284C47757}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceSegrigation.Lab", "LiskovSubstitution.Lab\InterfaceSegrigation.Lab.csproj", "{9F17321B-814A-4435-B39E-1F8A1B8A6FDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversion.Lab", "DependencyInversion.Lab\DependencyInversion.Lab.csproj", "{99DA541B-B53D-4B93-9B23-2ADC1DED7D52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOC_Through_Code", "IOC_Through_Code\IOC_Through_Code.csproj", "{02F64EAA-54F6-4A15-B088-2D9BA59559D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7EC7763-E5AB-4A7B-85F9-F5FF0505FC24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7EC7763-E5AB-4A7B-85F9-F5FF0505FC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7EC7763-E5AB-4A7B-85F9-F5FF0505FC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7EC7763-E5AB-4A7B-85F9-F5FF0505FC24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{609C49AF-96E9-4954-9F59-EE0284C47757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{609C49AF-96E9-4954-9F59-EE0284C47757}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{609C49AF-96E9-4954-9F59-EE0284C47757}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{609C49AF-96E9-4954-9F59-EE0284C47757}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F17321B-814A-4435-B39E-1F8A1B8A6FDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F17321B-814A-4435-B39E-1F8A1B8A6FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F17321B-814A-4435-B39E-1F8A1B8A6FDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F17321B-814A-4435-B39E-1F8A1B8A6FDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99DA541B-B53D-4B93-9B23-2ADC1DED7D52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99DA541B-B53D-4B93-9B23-2ADC1DED7D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99DA541B-B53D-4B93-9B23-2ADC1DED7D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99DA541B-B53D-4B93-9B23-2ADC1DED7D52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02F64EAA-54F6-4A15-B088-2D9BA59559D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02F64EAA-54F6-4A15-B088-2D9BA59559D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02F64EAA-54F6-4A15-B088-2D9BA59559D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02F64EAA-54F6-4A15-B088-2D9BA59559D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B7EC7763-E5AB-4A7B-85F9-F5FF0505FC24} = {5EC39373-3FB8-46EA-AA99-AEF72F919794}
+		{609C49AF-96E9-4954-9F59-EE0284C47757} = {29D87CB2-3B2D-4DDB-9714-8A1313D90EB2}
+		{9F17321B-814A-4435-B39E-1F8A1B8A6FDF} = {E5BAF715-1E2B-4B9B-8465-D1572ECA0643}
+		{99DA541B-B53D-4B93-9B23-2ADC1DED7D52} = {25C43309-5576-4F23-8A42-E2B46EA65D5E}
+	EndGlobalSection
+EndGlobal
