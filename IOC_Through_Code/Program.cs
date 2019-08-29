@@ -25,7 +25,7 @@ namespace IOC_Through_Code
         static void Main(string[] args)
         {
             Console.WriteLine("This is IOC");
-            Console.WriteLine("This is IOC");
+           
             var container = new UnityContainer();
            
            
