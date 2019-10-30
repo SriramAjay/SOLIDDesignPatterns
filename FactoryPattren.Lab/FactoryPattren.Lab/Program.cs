@@ -60,8 +60,7 @@ namespace FactoryPattren.Lab
             //*********************************Solution ************************************//
              void LoadTypesICanReturn()
             {
-                Dictionary<string, Type> vehicles;
-                vehicles = new Dictionary<string, Type>();
+                Dictionary<string, Type> vehicles = new Dictionary<string, Type>();
                 Type[] typeInThisAssembly = Assembly.GetExecutingAssembly().GetTypes();
                 foreach (Type type in typeInThisAssembly)
                 {
