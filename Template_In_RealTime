@@ -1,0 +1,157 @@
+
+
+public interface IItemMasterSearchProvider
+    {
+        Tuple<long, List<VM_CART_DETAILS_OUTPUT_PARAMETERS>> SearchItemMaster();
+    }
+	
+	 public interface IItemParLocSearchProvider
+    {
+        Tuple<long, List<VM_CART_DETAILS_OUTPUT_PARAMETERS>> SearchItemParLocations();
+    }
+
+
+    public class ERPItemSearch
+    {
+        private IItemMasterSearchProvider _itemMasterSearchProvider;
+        private IItemParLocSearchProvider _itemParLocSearchProvider;
+       
+        public Tuple<long, List<VM_CART_DETAILS_OUTPUT_PARAMETERS>> ERPItemMasterSearch()
+        {                      try
+            {               
+                // Search Item in Master tables
+                _itemMasterSearchProvider = new ItemMasterSearchProvider();
+                tplGetCartDetails = _itemMasterSearchProvider.SearchItemMaster();
+				
+                if (tplGetCartDetails != null)
+                {
+                    if (tplGetCartDetails.Item1 == AtparStatusCodes.S_FOUNDIN_ERP_ITEMMASTER)
+                    {
+                        
+                                // Search Item in Allocated and UnAllocated Par Locations
+                                _itemParLocSearchProvider = new ItemParLocSearchProvider();
+                                return _itemParLocSearchProvider.SearchItemParLocations();                       
+                    }
+                    else
+                    {
+                        if (tplGetCartDetails.Item1 == AtparStatusCodes.E_SERVERERROR)
+                        {
+                            return tplGetCartDetails;
+                        }
+                    }
+                }
+
+                return tplGetCartDetails;
+
+            }           
+            catch (Exception ex)
+            {
+              
+            }
+
+        }
+
+ public class ItemMasterSearchProvider : IItemMasterSearchProvider
+    {
+
+        public ItemMasterSearchProvider()
+        {
+
+        }
+
+        public Tuple<long, List<VM_CART_DETAILS_OUTPUT_PARAMETERS>> SearchItemMaster(t)
+        {
+           PSRestApiGet erpItemMasterSearch = null;
+                    erpItemMasterSearch = new ItemMasterSearch();
+        }
+
+    public class ItemMasterSearch : PSRestApiGet
+    {
+       
+        public ItemMasterSearch() : base(context)
+        {
+        }
+        
+
+    }
+
+    public class ItemParLocSearchProvider : IItemParLocSearchProvider
+    {
+       
+        public ItemParLocSearchProvider()
+        {
+
+        }
+        #endregion
+
+      
+        public Tuple<long, List<VM_CART_DETAILS_OUTPUT_PARAMETERS>> SearchItemParLocations()
+        {
+
+
+            try
+            {				
+                //Getting Details Of Cart by ERP Location Type
+                tplERPCartDetails = CartGetDetailsRestApi();
+                  
+                        lstItemPrice = GetItemPrice();
+            }
+            catch (Exception ex)
+            {
+            
+            }
+
+        }
+
+        #endregion
+
+      
+        private Tuple<long, List<VM_CART_DETAILS_OUTPUT_PARAMETERS>> CartGetDetailsRestApi())
+        {
+         
+
+            string strdistinctBunits = string.Format(string.Join(",", distinctSetBunits));
+            try
+            {
+                PSRestApiGet getItems = new ItemParLocSearch();
+               
+            }
+            catch (Exception ex)
+            {
+              
+               
+            }
+        }
+
+
+        private List<ItemPrice> GetItemPrice(List<VM_CART_DETAILS_OUTPUT_PARAMETERS> cartDetails,
+                                             VM_POU_ITEM_HEADER ItemHeader,
+                                             ConfigurationContext configurationContext)
+        {
+           
+
+                PSRestApiGet getItemPrice = new GetItemPrice();
+              
+        }
+	}
+
+   public class GetItemPrice : PSRestApiGet
+    {
+        public GetItemPrice() : base(context)
+        {
+           
+        }
+    }
+	
+    public class ItemParLocSearch : PSRestApiGet
+    {
+       
+
+
+        public ItemParLocSearch() : base(context)
+        {
+
+        }
+
+
+   }

@@ -29,7 +29,7 @@ namespace FactoryPattren.Lab
     {
         static void Main(string[] args)
         {
-            
+
             Console.WriteLine("Welcome to second hand bikes showroom");
             Console.WriteLine("Available bike are \n 1.Pulsar\n2.Appache\n3. HeroHonda \n Please select what do you want to know price");
             int _intUserSelection = Convert.ToInt32(Console.ReadLine());
@@ -58,7 +58,7 @@ namespace FactoryPattren.Lab
 
             LoadTypesICanReturn();
             //*********************************Solution ************************************//
-             void LoadTypesICanReturn()
+            void LoadTypesICanReturn()
             {
                 Dictionary<string, Type> vehicles = new Dictionary<string, Type>();
                 Type[] typeInThisAssembly = Assembly.GetExecutingAssembly().GetTypes();
@@ -74,7 +74,7 @@ namespace FactoryPattren.Lab
             IVehicals Factory = VehicalFactory.GetObject(_intUserSelection);
             Console.WriteLine("Original Price " + Factory.Original_Price);
             Console.WriteLine("\nDiscount on bike price is" + Factory.GetPrice(_intUserYearSelection));
-                 Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }
